@@ -145,6 +145,21 @@ spec:
         - mountPath: /grafana-dashboard-definitions/0/workload-total
           name: grafana-dashboard-workload-total
           readOnly: false
+        - mountPath: /grafana-dashboard-definitions/0/istio-control-plane
+          name: grafana-dashboard-istio-control-plane
+          readOnly: false
+        - mountPath: /grafana-dashboard-definitions/0/istio-mesh
+          name: grafana-dashboard-istio-mesh
+          readOnly: false
+        - mountPath: /grafana-dashboard-definitions/0/istio-performance
+          name: grafana-dashboard-istio-performance
+          readOnly: false
+        - mountPath: /grafana-dashboard-definitions/0/istio-service
+          name: grafana-dashboard-istio-service
+          readOnly: false
+        - mountPath: /grafana-dashboard-definitions/0/istio-workload
+          name: grafana-dashboard-istio-workload
+          readOnly: false
         - mountPath: /etc/grafana
           name: grafana-config
           readOnly: false
@@ -245,6 +260,21 @@ spec:
       - configMap:
           name: grafana-dashboard-workload-total
         name: grafana-dashboard-workload-total
+      - configMap:
+          name: grafana-dashboard-istio-control-plane
+        name: grafana-dashboard-istio-control-plane
+      - configMap:
+          name: grafana-dashboard-istio-mesh
+        name: grafana-dashboard-istio-mesh
+      - configMap:
+          name: grafana-dashboard-istio-performance
+        name: grafana-dashboard-istio-performance
+      - configMap:
+          name: grafana-dashboard-istio-service
+        name: grafana-dashboard-istio-service
+      - configMap:
+          name: grafana-dashboard-istio-workload
+        name: grafana-dashboard-istio-workload
       - name: grafana-config
         secret:
           secretName: grafana-config
